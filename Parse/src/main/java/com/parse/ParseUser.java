@@ -1214,7 +1214,7 @@ public class ParseUser extends ParseObject {
    */
   public boolean isLinked(String authType) {
     Map<String, Map<String, String>> authData = getAuthData();
-    return authData.containsKey(authType) && authData.get(authType) != null;
+    return authData.containsKey(authType) && authData.get(authType) != null && authData.get(authType) != JSONObject.NULL;
   }
 
   /**
